@@ -1,8 +1,7 @@
 function createTable() {
-    const rows = parseInt(prompt('Input number of rows'));
-  const cols = parseInt(prompt('Input number of columns'));
-
-  const table = document.getElementById('myTable');
+const rows = parseInt(prompt('Input number of rows'));
+const cols = parseInt(prompt('Input number of columns'));
+const table = document.getElementById('myTable');
 
   for (let i = 0; i < rows; i++) {
     const row = table.insertRow(i);
@@ -10,6 +9,5 @@ function createTable() {
       const cell = row.insertCell(j);
       cell.innerHTML = `Row-${i} Column-${j}`;
     }
-  }
-	
+  }	
 }
