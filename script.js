@@ -1,12 +1,15 @@
 function createTable() {
-    //Write your code here
-  var table = document.getElementById("myTable");
-  var row = table.insertRow(0);
-  var cell1 = row.insertCell(0);
-  var cell2 = row.insertCell(1);
-	var cell3 = row.insertCell(2);
-  cell1.innerHTML = "New-cell";
-  cell2.innerHTML = "New-cell";
-	cell3.innerHTML = "New-cell";
+    const rows = parseInt(prompt('Input number of rows'));
+  const cols = parseInt(prompt('Input number of columns'));
+
+  const table = document.getElementById('myTable');
+
+  for (let i = 0; i < rows; i++) {
+    const row = table.insertRow(i);
+    for (let j = 0; j < cols; j++) {
+      const cell = row.insertCell(j);
+      cell.innerHTML = `Row-${i} Column-${j}`;
+    }
+  }
 	
 }
